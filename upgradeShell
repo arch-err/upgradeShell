@@ -1,0 +1,22 @@
+#!/bin/sh
+#===========>>
+#
+# A script for automating the process of upgrading a shell
+#
+#===========>>
+sleep 1
+xdotool type "python3 -c 'import pty;pty.spawn(\"/bin/bash\")'"
+sleep 0.05
+xdotool key enter
+xdotool type "export TERM=xterm"
+sleep 0.05
+xdotool key enter
+xdotool key ctrl+z
+sleep 0.05
+xdotool type "stty raw -echo; fg"
+sleep 0.05
+xdotool key enter
+xdotool type "stty rows 70 columns 132"
+sleep 0.05
+xdotool key enter
+
